@@ -3,6 +3,10 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Home from './pages/Home'
 import Navigation from './navigation/Navigation'
 import { Grid } from '@mui/material';
+import dittodata from './ditto';
+import DittoProvider from "ditto-react";
+
+
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -39,10 +43,15 @@ export default function ToggleColorMode() {
   );
 
   return (
+    <DittoProvider source={dittodata}>
+
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <MyApp />
+
+          <MyApp />
       </ThemeProvider>
     </ColorModeContext.Provider>
+    </DittoProvider>
+
   );
 }

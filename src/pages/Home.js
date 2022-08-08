@@ -1,17 +1,13 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
-import placeholder from '../assets/img/placeholder-image.png';
-import { CustomPalette } from "../theme/palette";
+import ProjectCardPendo from "./ProjectCardPendo";
+import ProjectCardDL from "./ProjectCardDL";
+import { Ditto } from 'ditto-react';
 
 function Copyright() {
   return (
@@ -26,11 +22,11 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3];
-
-export default function Home() {
+const Home = ({}) => {
   return (
+    
     <React.Fragment>
+
       {/** H1 Title */}
       <Container
         sx={{
@@ -40,6 +36,7 @@ export default function Home() {
         }}
       >
         <Container maxWidth="sm">
+
           <Typography
             component="h1"
             variant="h2"
@@ -47,7 +44,9 @@ export default function Home() {
             color="text.primary"
             gutterBottom
           >
-            Hi, I'm Braxton :)
+          <Ditto componentId="home-page.intro" />
+
+
           </Typography>
           <Typography
             variant="h5"
@@ -71,40 +70,16 @@ export default function Home() {
       </Container>
 
       {/** Container Grid of Cards */}
-      <Container sx={{ py: 8 }}>
-        <Grid container spacing={4}>
-          {cards.map((card) => (
-            <Grid item key={card} xs={12} sm={6} md={4}>
-              <Card
-                sx={{
-                  backgroundColor: 'primary.container',
-                  height: "auto",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <CardMedia component="img"
-                  image={placeholder}
-                  alt="random"
-                />
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h5" component="h2" color='primary.main'>
-                    Project Name
-                  </Typography>
-                  <Typography color= 'rgba(151, 53, 149, 1)'>
-                    This is where I'll give a small description of this project.
-                  </Typography>
-                </CardContent>
-                {
-                /** I dont need these now but may want them in the future */
-                <CardActions>
-                  <Button size="small" href="https://www.youtube.com">View</Button>
-                  <Button size="small">Edit</Button>
-                </CardActions> }
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+      <Container sx={{
+        /* Auto layout */
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        padding: '128px 0px',
+        gap: '64px',
+      }}>
+        <ProjectCardPendo/>
+        <ProjectCardDL/>
       </Container>
 
       {/* Footer */}
@@ -123,6 +98,8 @@ export default function Home() {
         <Copyright />
       </Box>
       {/* End footer */}
-    </React.Fragment>
+    </React.Fragment> 
   );
 }
+
+export default Home; 
