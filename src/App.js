@@ -5,6 +5,10 @@ import Navigation from './navigation/Navigation'
 import { Grid } from '@mui/material';
 import dittodata from './ditto';
 import DittoProvider from "ditto-react";
+import Footer from './pages/Footer';
+import AboutMe from './pages/AboutMe';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
 
 
 
@@ -13,10 +17,18 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 function MyApp() {
   const colorMode = React.useContext(ColorModeContext);
   return (
-    <Grid container backgroundColor='background.paper'>
-      <Navigation handleChange={colorMode.toggleColorMode} />
-      <Home />
-    </Grid>
+    <Router>
+      <Navigation handleChange={colorMode.toggleColorMode} />  
+
+      <Routes>
+        <Route path="/" element={<Home />} />  
+        <Route path='about-me' element={<AboutMe />} />
+      </Routes>
+      <Footer />
+
+    </Router>
+
+
 
   );
 }
@@ -43,14 +55,13 @@ export default function ToggleColorMode() {
   );
 
   return (
-    <DittoProvider source={dittodata}>
 
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-
-          <MyApp />
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+    <DittoProvider source={dittodata} projectId="project_62f05a6f45f99efffd0ab277">
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+            <MyApp />
+        </ThemeProvider>
+      </ColorModeContext.Provider>
     </DittoProvider>
 
   );

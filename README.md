@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Commands to Remember
+ `npx ditto-cli pull` to pull latest ditto copy.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
