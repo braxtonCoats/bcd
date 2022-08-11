@@ -1,0 +1,22 @@
+{
+  "source": ["./figmaTokens/figmaTransformed.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "build/scss/",
+      "files": [{
+        "destination": "_variables.scss",
+        "format": "scss/variables"
+      }]
+    },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "build/js/",
+      "files": [{
+        "destination": "jsTokens.js",
+        "format": "javascript/module"
+      }]
+    }
+     
+        }
+      }

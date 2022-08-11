@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Home from './pages/Home'
+import Navigation from './navigation/Navigation'
+import { Grid } from '@mui/material';
+import dittodata from './ditto';
+import DittoProvider from "ditto-react";
 
-function App() {
+
+
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+
+function MyApp() {
+  const colorMode = React.useContext(ColorModeContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container backgroundColor='background.paper'>
+      <Navigation handleChange={colorMode.toggleColorMode} />
+      <Home />
+    </Grid>
+
   );
 }
 
-export default App;
+export default function ToggleColorMode() {
+  const [mode, setMode] = React.useState('light');
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+      },
+    }),
+    [],
+  );
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode],
+  );
+
+  return (
+    <DittoProvider source={dittodata}>
+
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+
+          <MyApp />
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+    </DittoProvider>
+
+  );
+}
