@@ -41,8 +41,7 @@ export default function ProjectCardPendo() {
                 alignItems: 'center',
                 padding: '16px 32px',
                 gap: '16p'}}>
-                <Button size="small" href="https://www.youtube.com">edit</Button>
-                <Button variant="contained" size="small">view</Button>
+                <Button variant="contained" size="small" href="/project-1">view</Button>
             </CardActions>
         </Card>
     );

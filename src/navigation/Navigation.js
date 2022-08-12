@@ -8,12 +8,28 @@ import { NavLink } from 'react-router-dom';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import Avatar from '@mui/material/Avatar';
+import SvgIcon from '@mui/material/SvgIcon';
+import { MyTheme } from '../theme/theme';
+
+
+function HomeIcon(props) {
+  return (
+    <SvgIcon {...props}>
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+    </SvgIcon>
+  );
+}
 
 
 function Navigation({handleChange}) {
   return (
     <AppBar>
       <Toolbar>
+      <Tooltip title="Home">
+        <IconButton href='/'>
+          <HomeIcon color='danger'/>
+        </IconButton>
+      </Tooltip>
         <Typography variant="h6" component="div" href='/' sx={{ flexGrow: 1 }}></Typography>
           <Button variant='outline' href='/about-me'>About Me</Button>
           <Button variant='outline'>Resume</Button>

@@ -5,10 +5,10 @@ import placeholder from '../assets/img/placeholder-image.png';
 import { Ditto } from "ditto-react";
 import { Paper } from "@mui/material";
 
-export default function P1() {
+export default function Project1() {
     return (
 
-        <Container>
+        <Container sx={{ m: 4}}>
             {/** Project 1 - Pendo Customization */}
             <Paper elevation={3} sx={{
                 p: 4,

@@ -13,7 +13,8 @@ export const CustomPalette = (mode) => ({
       ? {
           /** Light Color Palette */
           primary: {
-            main: colors.blue[65],
+            main: colors.red[50],
+            //main: colors.blue[65],
             default: colors.red[50],
             container: colors.blue[2],
             containerVariant: colors.blue[5],
