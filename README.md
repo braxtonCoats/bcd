@@ -1,5 +1,7 @@
 # Commands to Remember
- `npx ditto-cli pull` to pull latest ditto copy.
+`npx ditto-cli pull` to pull latest ditto copy.
+`npx token-transformer src/tokens/tokens.json src/tokens/output.json light,dark ` transform figma tokens
+
 
 
 ## Available Scripts
