@@ -27,12 +27,12 @@ StyleDictionaryPackage.registerTransform({
 function getStyleDictionaryConfig(theme) {
   return {
     "source": [
-      `tokens/${theme}.json`,
+      `src/tokens/${theme}.json`,
     ],
     "platforms": {
       "web": {
         "transforms": ["attribute/cti", "name/cti/kebab", "sizes/px"],
-        "buildPath": `output/`,
+        "buildPath": `src/tokens/output/`,
         "files": [{
             "destination": `${theme}.css`,
             "format": "css/variables",
