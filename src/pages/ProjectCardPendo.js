@@ -10,15 +10,14 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
-import placeholder from '../assets/img/placeholder-image.png';
-import { CustomPalette } from "../theme/palette";
+import PendoCover from '../assets/img/LL/PendoProjectCover.jpg';
 
 export default function ProjectCardPendo() {
     return (
 
         /** Project Card 1 */
         /** Pendo Customization */
-        <Card>
+        <Card raised >
             {/** Header */}
             <CardContent>
                 <Typography variant="h5" component="h2" color='primary.main'>
@@ -28,7 +27,7 @@ export default function ProjectCardPendo() {
 
             {/** Media */}
             <CardMedia component="img"
-                image={placeholder}
+                image={PendoCover}
                 alt="random"
             />
             
@@ -41,7 +40,7 @@ export default function ProjectCardPendo() {
                 alignItems: 'center',
                 padding: '16px 32px',
                 gap: '16p'}}>
-                <Button variant="contained" size="small" href="/project-1">view</Button>
+                <Button variant="contained" size="small" href="/project-1">View Project</Button>
             </CardActions>
         </Card>
     );

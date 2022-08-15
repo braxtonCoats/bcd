@@ -11,14 +11,14 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import placeholder from '../assets/img/placeholder-image.png';
-import { CustomPalette } from "../theme/palette";
+import DLcover from '../assets/img/DL/DesignLibrary.jpg';
 
 export default function ProjectCardDL() {
     return (
 
         /** Project Card 1 */
         /** Pendo Customization */
-        <Card>
+        <Card raised>
             {/** Header */}
             <CardContent>
                 <Typography variant="h5" component="h2" color='primary.main'>
@@ -28,7 +28,7 @@ export default function ProjectCardDL() {
 
             {/** Media */}
             <CardMedia component="img"
-                image={placeholder}
+                image={DLcover}
                 alt="random"
             />
             
@@ -41,7 +41,7 @@ export default function ProjectCardDL() {
                 alignItems: 'center',
                 padding: '16px 32px',
                 gap: '16p'}}>
-                <Button variant="contained" size="small" href="/project-2">view</Button>
+                <Button variant="contained" size="small" href="/project-2">View Project</Button>
             </CardActions>
         </Card>
     );

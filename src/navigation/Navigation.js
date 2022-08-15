@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Switch from '@mui/material/Switch';
@@ -9,8 +10,9 @@ import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import Avatar from '@mui/material/Avatar';
 import SvgIcon from '@mui/material/SvgIcon';
-import { MyTheme } from '../theme/theme';
+import { useTheme } from '@mui/system';
 
+var isDarkMode = null;
 
 function HomeIcon(props) {
   return (
@@ -22,23 +24,35 @@ function HomeIcon(props) {
 
 
 function Navigation({handleChange}) {
+
+  console.log(`Local Storage: ${localStorage.getItem("DARK_MODE")}`);
+  if (localStorage.getItem('DARK_MODE') === 'light'){
+    isDarkMode = false;
+  }
+  else{
+    isDarkMode = true;
+  }
+  console.log(`Is in dark mode? ${isDarkMode}`);
+  const theme = useTheme();
+
   return (
-    <AppBar>
+    <AppBar >
       <Toolbar>
       <Tooltip title="Home">
-        <IconButton href='/'>
-          <HomeIcon color='danger'/>
+        <IconButton href='/' color='inherit' >
+          <HomeIcon />
         </IconButton>
       </Tooltip>
         <Typography variant="h6" component="div" href='/' sx={{ flexGrow: 1 }}></Typography>
           <Button variant='outline' href='/about-me'>About Me</Button>
           <Button variant='outline'>Resume</Button>
-          <Switch onChange={handleChange} />
-          <Tooltip title="Open settings">
-              <IconButton onClick={''} sx={{ p: 0 }}>
+          {/*<Switch checked={isDarkMode} onClick={handleChange} /> */}
+        {/*  <Tooltip title="Open settings">
+             add: onClick={''} here 
+              <IconButton  sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
-            </Tooltip>
+            </Tooltip>*/}
       </Toolbar>
     </AppBar>
   );

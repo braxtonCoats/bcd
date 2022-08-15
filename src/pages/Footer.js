@@ -20,10 +20,10 @@ function Copyright() {
 
 export default function Footer() {
     return(
-        <Container>
+        <Container sx={{bgcolor: "background.main"}}>
       {/* Footer */}
-      <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
+      <Box sx={{p: 6 }} component="footer">
+        <Typography variant="h6" color='text.secondary' align="center" gutterBottom>
           Footer
         </Typography>
         <Typography

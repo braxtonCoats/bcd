@@ -7,75 +7,57 @@ import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import ProjectCardPendo from "./ProjectCardPendo";
 import ProjectCardDL from "./ProjectCardDL";
-import { Ditto } from 'ditto-react';
+import { Ditto } from "ditto-react";
 import { Paper } from "@mui/material";
-
-
+import Grid from "@mui/material/Unstable_Grid2";
 
 const Home = ({}) => {
   return (
-    
-    <Container sx={{ bgcolor: 'background.paper'}}>
+    <Container>
       {/** H1 Title */}
       <Container
         sx={{
-          bgcolor: "background.paper",
+          bgcolor: "background.main",
           pt: 24,
-          pb: 6,
         }}
       >
-        <Container maxWidth="sm">
-
-          <Typography
-            component="h1"
-            variant="h2"
-            align="center"
-            color="text.primary"
-            gutterBottom
-          >
+        <Typography
+          variant="h2"
+          align="center"
+          color="text.primary"
+          gutterBottom
+        >
           <Ditto componentId="home-page.intro" />
-
-
-          </Typography>
-          <Typography
-            variant="h5"
-            align="center"
-            color="text.secondary"
-            paragraph
-          >
-            I'm a designer passionate about <b>users</b>, <b>design systems</b>
-            .......and <b>Star Wars</b>
-          </Typography>
-          <Stack
-            sx={{ pt: 4 }}
-            direction="row"
-            spacing={2}
-            justifyContent="center"
-          >
-            <Button variant="contained">Main call to action</Button>
-            <Button variant="outlined">Secondary action</Button>
-          </Stack>
-        </Container>
+        </Typography>
+        <Typography
+          variant="h5"
+          align="center"
+          color="text.secondary"
+          paragraph
+        >
+          <Ditto componentId="home-page.description" />
+        </Typography>
+        <Stack
+          sx={{ pt: 4 }}
+          direction="row"
+          spacing={2}
+          justifyContent="center"
+        ></Stack>
       </Container>
 
       {/** Container Grid of Cards */}
-      <Container sx={{
-        /* Auto layout */
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'flex-start',
-        padding: '128px 0px',
-        gap: '64px',
-      }}>
-        <ProjectCardPendo/>
-        <ProjectCardDL/>
-      </Container>
+      <Grid container spacing={8}>
 
+      <Grid xs={6}>
+        <ProjectCardPendo />
+        </Grid>
+        <Grid xs>
+        <ProjectCardDL />
+        </Grid>
+      </Grid>
       {/** Content */}
-
-
     </Container>
   );
-}
+};
 
-export default Home; 
+export default Home;
