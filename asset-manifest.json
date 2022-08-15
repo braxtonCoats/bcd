@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.2da68edd.js",
+    "static/js/787.cf1fd063.chunk.js": "/static/js/787.cf1fd063.chunk.js",
+    "static/media/Pendorama.png": "/static/media/Pendorama.a4062c1431c0e102e6b3.png",
+    "static/media/DesignLibrary.jpg": "/static/media/DesignLibrary.ca6a99b82780da9d1226.jpg",
+    "static/media/PendoProjectCover.jpg": "/static/media/PendoProjectCover.fbdd7d3ecb6a2e9a8831.jpg",
+    "static/media/LLmock2.png": "/static/media/LLmock2.6d24845c85690c73c73d.png",
+    "static/media/LLmock1.png": "/static/media/LLmock1.4e354b4951345c25df7b.png",
+    "static/media/LLmock3-3.png": "/static/media/LLmock3-3.0e8fd9559fd594074c46.png",
+    "static/media/LLmock3-2.png": "/static/media/LLmock3-2.04a8c9e8c0989b5db523.png",
+    "static/media/LLmock3.png": "/static/media/LLmock3.94a219e7b6e1bcc5b1ff.png",
+    "static/media/LLtoday.png": "/static/media/LLtoday.fb59ac809b8aa975a28c.png",
+    "static/media/PPyearbook.png": "/static/media/PPyearbook.cd0a0e957b28a63a7713.png",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.2da68edd.js.map": "/static/js/main.2da68edd.js.map",
+    "787.cf1fd063.chunk.js.map": "/static/js/787.cf1fd063.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.2da68edd.js"
+  ]
+}
