@@ -8,7 +8,6 @@ import Link from "@mui/material/Link";
 import ProjectCardPendo from "./ProjectCardPendo";
 import ProjectCardDL from "./ProjectCardDL";
 import { Ditto } from "ditto-react";
-import { Paper } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 
 const Home = ({}) => {

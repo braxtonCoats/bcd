@@ -13,8 +13,6 @@ import SvgIcon from '@mui/material/SvgIcon';
 import { useTheme } from '@mui/system';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-var isDarkMode = null;
-
 function HomeIcon(props) {
   return (
     <SvgIcon {...props}>
@@ -25,16 +23,6 @@ function HomeIcon(props) {
 
 
 function Navigation({handleChange}) {
-
-  console.log(`Local Storage: ${localStorage.getItem("DARK_MODE")}`);
-  if (localStorage.getItem('DARK_MODE') === 'light'){
-    isDarkMode = false;
-  }
-  else{
-    isDarkMode = true;
-  }
-  console.log(`Is in dark mode? ${isDarkMode}`);
-  const theme = useTheme();
 
   return (
     <AppBar >

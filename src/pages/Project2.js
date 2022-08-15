@@ -3,7 +3,6 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import placeholder from "../assets/img/placeholder-image.png";
 import { Ditto } from "ditto-react";
-import { Paper } from "@mui/material";
 
 export default function P2() {
   return (
