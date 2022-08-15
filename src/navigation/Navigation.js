@@ -11,6 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import Avatar from '@mui/material/Avatar';
 import SvgIcon from '@mui/material/SvgIcon';
 import { useTheme } from '@mui/system';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 var isDarkMode = null;
 
@@ -45,7 +46,9 @@ function Navigation({handleChange}) {
       </Tooltip>
         <Typography variant="h6" component="div" href='/' sx={{ flexGrow: 1 }}></Typography>
           <Button variant='outline' href='/about-me'>About Me</Button>
-          <Button variant='outline'>Resume</Button>
+          <Tooltip title="Currently Unavalible">
+          <Button  variant='outline'>Resume</Button>
+          </Tooltip>
           {/*<Switch checked={isDarkMode} onClick={handleChange} /> */}
         {/*  <Tooltip title="Open settings">
              add: onClick={''} here 
@@ -53,6 +56,12 @@ function Navigation({handleChange}) {
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>*/}
+            <Tooltip title="View LinkedIn Profile">
+            <IconButton>
+              <LinkedInIcon fontSize='large' href='https://www.linkedin.com/in/braxton-coats/'
+                sx={{color: 'primary.onMain'}}/>
+            </IconButton>
+            </Tooltip>
       </Toolbar>
     </AppBar>
   );

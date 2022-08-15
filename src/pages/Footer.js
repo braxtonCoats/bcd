@@ -9,9 +9,9 @@ function Copyright() {
     return (
       <Typography variant="body2" color="text.secondary" align="center">
         {"Copyright © "}
-        <Link color="inherit" href="https://mui.com/">
+        {/*<Link color="inherit" href="https://mui.com/">
           Your Website
-        </Link>{" "}
+        </Link>{" "} */}
         {new Date().getFullYear()}
         {"."}
       </Typography>
@@ -23,16 +23,19 @@ export default function Footer() {
         <Container sx={{bgcolor: "background.main"}}>
       {/* Footer */}
       <Box sx={{p: 6 }} component="footer">
-        <Typography variant="h6" color='text.secondary' align="center" gutterBottom>
-          Footer
-        </Typography>
         <Typography
           variant="subtitle1"
           align="center"
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          This portfolio was built <strong>by hand</strong> in React by <strong>Braxton Coats</strong> (me) 
+        </Typography>
+        <Typography variant="subtitle1"
+          align="center"
+          color="text.secondary"
+          component="p">
+          It is constantly being updated and changed as I learn more about creating React webpages.
         </Typography>
         <Copyright />
       </Box>
