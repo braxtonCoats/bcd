@@ -49,7 +49,6 @@ export const CustomPalette = (mode) => ({
           background: {
             main: token.light.theme.background.value,
             onMain: token.light.theme["on-background"].value,
-            paper: token.light.theme.surface.value,
             default: token.light.theme.background.value
           }
 
@@ -92,7 +91,6 @@ export const CustomPalette = (mode) => ({
           background: {
             main: token.dark.theme.background.value,
             onMain: token.dark.theme["on-background"].value,
-            paper: token.dark.theme.surface.value,
             default: token.dark.theme.background.value
           }
         }),
