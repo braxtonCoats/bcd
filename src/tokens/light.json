@@ -66,7 +66,7 @@
       "description": "token=md.sys.color.on-background\n\nbackground / on-background\n\nRegular text:\nLevel AA - ✅ Pass\nLevel AAA - ✅ Pass\n\nLarge text:\nLevel AA - ✅ Pass\nLevel AAA - ✅ Pass\n\nIcons:\nLevel AA - ✅ Pass\n"
     },
     "background": {
-      "value": "#fffbff",
+      "value": "#ffffff",
       "type": "color",
       "description": "token=md.sys.color.background\n\nbackground / on-background\n\nRegular text:\nLevel AA - ✅ Pass\nLevel AAA - ✅ Pass\n\nLarge text:\nLevel AA - ✅ Pass\nLevel AAA - ✅ Pass\n\nIcons:\nLevel AA - ✅ Pass\n"
     },
